@@ -1,12 +1,9 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header'
-const inter = Inter({ subsets: ['latin'] })
+import React from 'react'
 
-export default function Home() {
+function JavaScriptTopics() {
   return (
-    <main>
-      <div className='text-center w-1/2 bg-cyan-800 px-3'>
+    <>
+          <div className='text-center w-1/2 bg-cyan-800 px-3'>
         <div className='flex justify-between pb-4 '>
           <div className='text-cyan-300 border-b-2 rounded-md border-green-300'>What is pure javascript funciton</div>
         <div className='text-white'>Done</div>
@@ -153,7 +150,9 @@ export default function Home() {
         </div>
 
       </div>
-      
-    </main>
+
+    </>
   )
 }
+
+export default JavaScriptTopics

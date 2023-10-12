@@ -16,3 +16,15 @@
   }
 }
 
+.topics{display:flex;
+      justify-content: space-between;
+      padding-top:4px;}
+
+.topics_des{color:cyan;
+   border-bottom:2px;
+   border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; 
+  }
+
+.topics_status{
+  color:white}
