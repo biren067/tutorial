@@ -1,20 +1,26 @@
 import React from 'react'
+import ModelQueries from '@/components/django/ModelQueries'
 import Signal from '@/components/django/Signal'
 
 function Django() {
    const topics = [
-        {'Basic of Kafka':
+        {'Signal':
           [ 
             {'Defination':{'status':'Done','desc':<Signal/>}},
 
           ],
-        },
+        },{'Model Queries':
+          [ 
+            {'Defination':{'status':'Done','desc':<ModelQueries/>}},
+
+          ],
+        }
 
        ]
   return (
     <>
           <div className='w-1/2 bg-cyan-800'>
-        <h1 className='text-center font-bold text-yellow-300 underline'>KAFKA</h1>
+        <h1 className='text-center font-bold text-yellow-300 underline'>Django</h1>
         {topics.map((list_item, index)=>(
             <div className='flex flex-col' key={index}>
                 <div className='text-lg text-yellow-500 pb-3'>{Object.keys(list_item)[0]}</div>

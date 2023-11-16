@@ -1,12 +1,20 @@
 import React from 'react'
-import Signal from '@/components/django/Signal'
+import Basics from '@/components/kafka/Basics'
+import Zookeeper from '@/components/kafka/Zookeeper'
+import Brokers from '@/components/kafka/Brokers'
+import Topics from '@/components/kafka/Topics'
+import Cluster from '@/components/kafka/Cluster'
 
-function Django() {
-   const topics = [
+
+function kafka() {
+       const topics = [
         {'Basic of Kafka':
           [ 
-            {'Defination':{'status':'Done','desc':<Signal/>}},
-
+            {'Defination':{'status':'Done','desc':<Basics/>}},
+            {'Zookeeper':{'status':'Done','desc':<Zookeeper/>}},
+            {'Cluster':{'status':'Done','desc':<Cluster/>}},
+            {'Brokers':{'status':'Done','desc':<Brokers/>}},
+            {'Topics':{'status':'Done','desc':<Topics/>}},
           ],
         },
 
@@ -57,4 +65,4 @@ function Django() {
   )
 }
 
-export default Django
+export default kafka

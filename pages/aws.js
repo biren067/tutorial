@@ -1,12 +1,18 @@
 import React from 'react'
-import Signal from '@/components/django/Signal'
-
-function Django() {
-   const topics = [
-        {'Basic of Kafka':
-          [ 
-            {'Defination':{'status':'Done','desc':<Signal/>}},
-
+import Athena from '../components/aws/Athena'
+import Glue from '../components/aws/Glue'
+import Lambda from '../components/aws/Lambda'
+import QuickSight from '../components/aws/QuickSight'
+import S3 from '../components/aws/S3'
+function aws() {
+        const topics = [
+        {'Amazon Web Services':
+          [ {'AWS S3':{'status':'Done','desc':<S3/>}},
+            {'AWS Athena':{'status':'Done','desc':<Athena/>}},
+            {'AWS Glue':{'status':'Done','desc':<Glue/>}},
+            {'AWS Lambda':{'status':'Done','desc':<Lambda/>}},
+            {'AWS QuickSight':{'status':'Done','desc':<QuickSight/>}},
+    
           ],
         },
 
@@ -14,7 +20,7 @@ function Django() {
   return (
     <>
           <div className='w-1/2 bg-cyan-800'>
-        <h1 className='text-center font-bold text-yellow-300 underline'>KAFKA</h1>
+        <h1 className='text-center font-bold text-yellow-300 underline'>AWS</h1>
         {topics.map((list_item, index)=>(
             <div className='flex flex-col' key={index}>
                 <div className='text-lg text-yellow-500 pb-3'>{Object.keys(list_item)[0]}</div>
@@ -57,4 +63,4 @@ function Django() {
   )
 }
 
-export default Django
+export default aws

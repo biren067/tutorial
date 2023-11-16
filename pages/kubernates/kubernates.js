@@ -1,12 +1,16 @@
 import React from 'react'
-import Signal from '@/components/django/Signal'
-
-function Django() {
-   const topics = [
-        {'Basic of Kafka':
+import SingleHost from '@/components/kubernates/SingleHost'
+import AutoScaling from '@/components/kubernates/AutoScaling'
+import AutoHealing from '@/components/kubernates/AutoHealing'
+import EnterpriseSupplortLack from '@/components/kubernates/EnterpriseSupplortLack'
+function kubernates() {
+    const topics = [
+        {'Problem with Docker':
           [ 
-            {'Defination':{'status':'Done','desc':<Signal/>}},
-
+            {'SingleHost':{'status':'Done','desc':<SingleHost/>}},
+            {'Healing or AutoHealing':{'status':'Done','desc':<AutoHealing/>}},
+            {'Scaling or AutoScaling':{'status':'Done','desc':<AutoScaling/>}},
+            {'Lack of Enterprises Level support':{'status':'Done','desc':<EnterpriseSupplortLack/>}},
           ],
         },
 
@@ -14,7 +18,7 @@ function Django() {
   return (
     <>
           <div className='w-1/2 bg-cyan-800'>
-        <h1 className='text-center font-bold text-yellow-300 underline'>KAFKA</h1>
+        <h1 className='text-center font-bold text-yellow-300 underline'>kubernates</h1>
         {topics.map((list_item, index)=>(
             <div className='flex flex-col' key={index}>
                 <div className='text-lg text-yellow-500 pb-3'>{Object.keys(list_item)[0]}</div>
@@ -57,4 +61,4 @@ function Django() {
   )
 }
 
-export default Django
+export default kubernates

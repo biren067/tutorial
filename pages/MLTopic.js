@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '@/components/Header'
 
+
 function MLTopic() {
     const topics = [
         {'Data Preprocessing':[{'Data Preprocessing':'Done'},{"Missing Values":'Revision'},{"Encoding Features":'Revision'},{"train-test-split":'Done'},{"Feature Scaling":'Done'}]},
@@ -25,7 +26,7 @@ function MLTopic() {
     ]
   return (
     <>
-          <div className='w-1/2 bg-cyan-800'>
+        <div className='w-1/2 bg-cyan-800'>
         <h1 className='text-center font-bold text-yellow-300 underline'>MLTopic</h1>
 
         {topics.map((list_item, index)=>(
