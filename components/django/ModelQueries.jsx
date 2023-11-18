@@ -10,7 +10,7 @@ function ModelQueries() {
             <ul className='pl-10'>
                 <li>from blog.models import Blog, Entry</li>
                 <li>entry = Entry.objects.get(pk=1)</li>
-                <li>cheese_blog = Blog.objects.get(name="Cheddar Talk")</li>
+                <li>cheese_blog = Blog.objects.get(name=&apos;Cheddar Talk&apos;)</li>
                 <li>entry.blog = cheese_blog</li>
                 <li>entry.save()</li>
             </ul>
@@ -18,7 +18,7 @@ function ModelQueries() {
         <li> Updating a Field on ManyToManyField is by using add() method
             <ul className='pl-10'>
                 <li> from blog.models import Author</li>
-                <li> joe = Author.objects.create(name="Joe")</li>
+                <li> joe = Author.objects.create(name=&apos;Joe&apos;)</li>
                 <li> entry = Entry.objects.get(pk=1)</li>
                 <li> entry.authors.add(joe)</li>
                 
@@ -34,7 +34,7 @@ function ModelQueries() {
                 <li> The result of refining a QuerySet is itself a QuerySet.</li>
                 <li> Means, Result of one queryset is a queryset.</li>
                 <ul style={{listStyleType:'circle'}}>
-                    <li>Entry.objects.filter(headline__startswith="What")
+                    <li>Entry.objects.filter(headline__startswith=&apos;What&apos;)
                         .exclude(pub_date__gte=datetime.date.today())
                         .filter(pub_date__gte=datetime.date(2005, 1, 30))</li>
                 </ul>        
@@ -49,7 +49,7 @@ function ModelQueries() {
                 <li>exclude(**kwargs)
                     <p>Returns a new QuerySet containing objects that do not match the given lookup parameters.</p>
                 </li>
-                <li> q1 = Entry.objects.filter(headline__startswith="What")</li>
+                <li> q1 = Entry.objects.filter(headline__startswith=&apos;What&apos;)</li>
                 <li> q2 = q1.exclude(pub_date__gte=datetime.date.today())</li>
                 <li> q3 = q1.filter(pub_date__gte=datetime.date.today())</li>        
             </ul>
@@ -59,9 +59,9 @@ function ModelQueries() {
                 <li> the act of creating a QuerySet doesn’t involve any database activity. You can stack filters together all day long, and Django won’t actually run the query until the QuerySet is evaluated
                 </li>
                 <li> print(q), will hit the database. Below command will only work on model not on database.
-                    <p>q = Entry.objects.filter(headline__startswith="What")<br/>
+                    <p>q = Entry.objects.filter(headline__startswith=&apos;What&apos;)<br/>
                         q = q.filter(pub_date__lte=datetime.date.today())<br/>
-                        q = q.exclude(body_text__icontains="food")
+                        q = q.exclude(body_text__icontains=&apos;food&apos;)
                     </p>
                 </li>
 
