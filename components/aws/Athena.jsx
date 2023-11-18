@@ -4,7 +4,7 @@ function Athena() {
   return (
     <div>
         <li>Its main purpose is to allow users to analyze and query data stored in Amazon S3 using SQL (Structured Query Language) without the need for setting up and managing complex infrastructure</li>
-        <li>You don't have to worry to scale up or down. Scaling is done by Athena itself</li>
+        <li>You don&apos;t have to worry to scale up or down. Scaling is done by Athena itself</li>
         <li>It is Interactive query service to analyse data directly.</li>
         <li>It uses S3 for data and fetch it using SQL queries.</li>
         <li>With amazon Athena, we only pay for query the data.</li>
