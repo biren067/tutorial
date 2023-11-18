@@ -14,6 +14,7 @@ function Header() {
             <Link href = "/kafka"><div>Kafka</div></Link>
             <Link href = "/django"><div>Django</div></Link>
             <Link href = "/aws"><div>AWS</div></Link>
+            <Link href = "/sql"><div>SQL</div></Link>
         </div>
     </>
   )
