@@ -1,5 +1,4 @@
 import React from 'react'
-import VarLetConst from '@/components/javaScript/VarLetConst'
 
 function javaScript() {
   const topics = [
