@@ -7,9 +7,9 @@ function Interview() {
       <div className='text-cyan-200 text-lg bg-cyan-700 px-2 font-semibold border border-double my-2 italic'>
         Sql query to show list of female employee having salary between 1500 and 1800 is promoted, show a saperate column?
         <div className='text-cyan-50 text-md'>
-          SELECT ename AS NAME, salary, gender, CASE WHEN salary BETWEEN 15000 AND 18000 THEN 'PROMOTED' ELSE '' END AS PROMOTION
+          SELECT ename AS NAME, salary, gender, CASE WHEN salary BETWEEN 15000 AND 18000 THEN &apos;PROMOTED&apos; ELSE &apos;&apos; END AS PROMOTION
           <br/>FROM employee
-          <br/>WHERE gender = 'F'
+          <br/>WHERE gender = &apos;F&apos;
         </div>
         <hr/>
 
@@ -23,10 +23,10 @@ function Interview() {
         
         Find the duplicate in given table
         <div className='text-cyan-50 text-md'>
-          SELECT name,count('*') as count
+          SELECT name,count(&apos;*&apos;) as count
           <br/>FROM orders
           <br/>GROUP BY name
-          <br/>HAVING count('*') &gt; 1
+          <br/>HAVING count(&apos;*&apos;) &gt; 1
         </div>
         <hr/>
         Find the second highest salary per department wise
